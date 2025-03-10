@@ -3,7 +3,8 @@
 }
 
 :root {
-    --primary-color: #171100
+    --primary-color: #171100;
+    --font-heading: "Sen", sans-serif
 }
 
 html {
@@ -35,11 +36,14 @@ a {
     font-weight: 600;
     display: inline-block;
     background: var(--primary-color);
-    border-radius: 24.5px;
+    border-radius: 99990px;
     min-width: 118px;
     padding: 0 16px;
     text-align: center;
     line-height: 50px;
+}
+.btn:hover{
+    opacity: 0.5;
 }
 
 /* Header */
@@ -123,6 +127,7 @@ a {
 
 .hero .content-block {
     width: 52%;
+    padding: 64px 0 0 130px
 }
 
 .hero .media-block .img {
@@ -137,6 +142,90 @@ a {
     background: #FFF;
     width: 270px;
     position: absolute;
-    bottom : 48px;
+    bottom: 48px;
     right: 0;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+    padding: 28px 24px;
+}
+
+.hero .hero-summary .item {
+    display: flex;
+}
+
+.hero .hero-summary .item+.item {
+    margin-top: 22px;
+}
+
+.hero .hero-summary .item:nth-of-type(2) .icon {
+    background: #FCEFFF;
+}
+
+.hero .hero-summary .item:nth-of-type(3) .icon {
+    background: #EBEAFF;
+}
+
+.hero .hero-summary .lable {
+    color: #5F5B53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.hero .hero-summary .title {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.hero .hero-summary .icon {
+    background-color: #FFF9E8;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-summary .info {
+    margin-left: 16px;
+}
+
+
+
+.content-block .heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -1.16px;
+}
+
+.content-block .desc {
+    color: #5F5B53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+    margin: 22px 0;
+}
+
+.content-block .cta-group {
+    margin: 38px 0 48px;
+    display: flex;
+    background: red;
+    align-items: center;
+}
+
+.cta-group .watch-video {
+    border: none;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+}
+.hero-cta {
+    min-width: 180px;
+    /* background: #FFB900; */
+    line-height: 1.67;
 }
