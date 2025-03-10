@@ -1,9 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #171100
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+
+.main-content {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background: red; */
+    max-width: calc(100% - 48px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: inline-block;
+    background: var(--primary-color);
+    border-radius: 24.5px;
+    min-width: 118px;
+    padding: 0 16px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Header */
 .header {
-    font-family: Sen;
-    color: #171100;
-    font-size: 58px;
-    font-style: normal;
-    font-weight: 700;
-    /* line-height: 68px; */
-    /* letter-spacing: -1.16px; */
+    background: #FFFCF4
+}
+
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px
+}
+
+.fixed {
+    position: sticky;
+    top: -28px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav a {
+    color: #5F5B53;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 8px 21px;
+    position: relative;
+
+}
+
+.nav a:hover,
+.nav li.active a {
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
+    color: var(--primary-color);
+}
+
+.nav li.active a::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--primary-color);
+    position: absolute;
+    left: 21px;
+    bottom: 6px
+}
+
+.header .sign-up-btn {
+    min-width: 144px;
+}
+
+.header .action {
+    margin-left: 49px;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    background: #FFFCF4;
+    padding-top: 56px;
+}
+
+.hero .body {
+    display: flex;
+}
+
+.hero .media-block {
+    width: 48%;
+    position: relative;
+
+}
+
+.hero .content-block {
+    width: 52%;
+}
+
+.hero .media-block .img {
+    width: 470px;
+    height: 685px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.hero .hero-summary {
+    border-radius: 12px;
+    background: #FFF;
+    width: 270px;
+    position: absolute;
+    bottom : 48px;
+    right: 0;
 }
