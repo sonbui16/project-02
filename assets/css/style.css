@@ -36,19 +36,20 @@ a {
     font-weight: 600;
     display: inline-block;
     background: var(--primary-color);
-    border-radius: 99990px;
+    border-radius: 999px;
     min-width: 118px;
     padding: 0 16px;
     text-align: center;
     line-height: 50px;
 }
-.btn:hover{
-    opacity: 0.5;
+
+.btn:hover {
+    opacity: 0.9;
 }
 
 /* Header */
 .header {
-    background: #FFFCF4
+    background: #FFFCF4;
 }
 
 .header .body {
@@ -60,6 +61,8 @@ a {
 .fixed {
     position: sticky;
     top: -28px;
+    z-index: 1;
+
 }
 
 .nav ul {
@@ -214,7 +217,7 @@ a {
 .content-block .cta-group {
     margin: 38px 0 48px;
     display: flex;
-    background: red;
+    /* background: red;  */
     align-items: center;
 }
 
@@ -224,8 +227,52 @@ a {
     display: flex;
     align-items: center;
 }
+
 .hero-cta {
     min-width: 180px;
-    /* background: #FFB900; */
-    line-height: 1.67;
+    background: #FFB900;
+    line-height: 64px;
+}
+
+.hero .desc strong {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 0 8px 0 28px;
+}
+
+.hero .stats {
+    margin-left: -28px;
+}
+
+.popular .popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular {
+    padding: 65px 0;;
+    background: #fff;
+    padding-top: 135px;
+}
+
+.popular .heading {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -0.76px;
+}
+
+.popular .desc {
+    color: #5F5B53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.7;
+    width: 458px;
+    margin-top: 16px;
+    /* 166.667% */
 }
