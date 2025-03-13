@@ -256,10 +256,7 @@ a {
 
 .popular {
     padding: 65px 0;
-<<<<<<< HEAD
     ;
-=======
->>>>>>> cb9e269 (lam popular)
     background: #fff;
     padding-top: 135px;
 }
@@ -282,7 +279,6 @@ a {
     /* 166.667% */
 }
 
-<<<<<<< HEAD
 /* Feedback */
 .feedback {
     background: #2E2100;
@@ -363,7 +359,6 @@ a {
 
 .features {
     margin-top: 135px;
-=======
 /* Course-List */
 
 .course-list {
@@ -420,5 +415,4 @@ a {
     padding: 22px;
     display: flex;
     justify-content: space-between ;
->>>>>>> cb9e269 (lam popular)
 }
