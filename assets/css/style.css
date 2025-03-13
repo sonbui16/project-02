@@ -353,3 +353,9 @@ a {
     display: flex;
     overflow: hidden;
 }
+
+/* Features */
+
+.features {
+    margin-top: 135px;
+}
