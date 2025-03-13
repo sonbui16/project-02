@@ -254,7 +254,8 @@ a {
 }
 
 .popular {
-    padding: 65px 0;;
+    padding: 65px 0;
+    ;
     background: #fff;
     padding-top: 135px;
 }
@@ -275,4 +276,80 @@ a {
     width: 458px;
     margin-top: 16px;
     /* 166.667% */
+}
+
+/* Feedback */
+.feedback {
+    background: #2E2100;
+    padding: 96px 0px;
+}
+
+.feedback .feedback-item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.feedback .info {}
+
+.feedback .content {
+    width: 66%;
+    margin-left: auto;
+}
+
+.feedback .info .title {
+    color: #F7F7F7;
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 18px;
+}
+
+.feedback .info .des {
+    color: #BFBCB2;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8; 
+    margin-top: 4x;
+
+}
+
+.feedback .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback-item .dots {
+    display: flex;
+
+}
+
+.feedback-item .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    margin-right: 8px;
+    margin-top: 28px;
+    cursor: pointer;
+}
+.feedback-item .dot,active{
+    background: #FFB900;
+}
+
+.content blockquote {
+    color: #FFF;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-left: 30px;
+}
+.feedback-list {
+    display: flex;
+    overflow: hidden;
 }
