@@ -9,8 +9,7 @@ import RefundPolicy from "../../pages/RefundPolicy";
 import Privacy from "../../pages/Privacy";
 import PostDetail from "../../pages/PostDetail";
 import ErrorPage from "../../pages/ErrorPage";
-
-
+import UseState from "../../pages/UseState";
 
 import DefaultLayout from "../../layouts/DefaultLayout";
 import PageLayout from "../../layouts/PageLayout";
@@ -39,6 +38,8 @@ function AppRoutes() {
         <Route element={<SidebarLayout />}>
           {/* <Route path="/about" element={<About />} /> */}
         </Route>
+
+        <Route path="use-state" element={<UseState />} />
       </Routes>
     </Router>
   );
