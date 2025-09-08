@@ -2,29 +2,33 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router";
 import styles from "./Navigation.module.css";
 
 const navItem = [
-  { to: "/", label: "Home" },
-  { to: "/news", label: "News" },
-  { to: "/about", label: "About" },
+  { to: "/", label: "Giới thiệu" },
+  { to: "/about", label: "Bộ sưu tập" },
+  { to: "/news", label: "Tin tức" },
+  { to: "/systems", label: "Hệ thống" },
+
 ];
 
 function Navigation() {
   return (
-    <nav>
-      <ul>
-        {navItem.map((item) => (
-          <li key={item.to}>
-            <NavLink
-              to={item.to}
-              className={({ isActive }) =>
-                isActive ? styles.active : undefined
-              }
-            >
-              {item.label}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className="col-8">
+      <nav className={styles.wrapper}>
+        <ul>
+          {navItem.map((item) => (
+            <li key={item.to} className= {styles.navItem}>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 }
 export default Navigation;

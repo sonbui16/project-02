@@ -1,3 +1,14 @@
+.wrapper ul {
+    display: flex;
+}
+
+.navItem {
+    padding: 8px 18px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1
+}
+
 .active {
     color: red;
 }

@@ -12,7 +12,7 @@ function SidebarLayout() {
     return (
         <div className="">
             <Header />
-            <Navigation></Navigation>
+            {/* <Navigation></Navigation> */}
             <div className="container">
                 <Sidebar />
                 <div className="content">
