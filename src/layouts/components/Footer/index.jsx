@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import bocongthuong from "../../../../assets/images/bocongthuong.png";
+import bocongthuong from "../../../assets/images/bocongthuong.png";
 
 import { Link } from "react-router";
 

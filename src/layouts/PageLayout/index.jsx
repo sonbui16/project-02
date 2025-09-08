@@ -2,13 +2,11 @@ import { Outlet } from "react-router";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
 
-function DefaultLayout() {
+function PageLayout() {
   return (
     <div className="">
       <Header />
-      {/* <Navigation /> */}
       <main className="container">
         <Outlet />
       </main>
@@ -16,4 +14,4 @@ function DefaultLayout() {
     </div>
   );
 }
-export default DefaultLayout;
+export default PageLayout;

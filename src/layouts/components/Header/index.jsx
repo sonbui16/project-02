@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "../Navigation";
 // import {} from '../../../assets/images/logo.png';
-import logo from "../../../assets/images/logo.png";
+import logo from "../../../assets/images/logo.jpg";
 function Header() {
   return (
     <header className="container header">
