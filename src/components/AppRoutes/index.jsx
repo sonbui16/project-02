@@ -1,4 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+  useLocation,
+} from "react-router";
+import { useEffect } from "react";
 
 // import Navigation from "../../layouts/Navigation";
 import Home from "../../pages/Home";
@@ -10,23 +17,32 @@ import Privacy from "../../pages/Privacy";
 import PostDetail from "../../pages/PostDetail";
 import ErrorPage from "../../pages/ErrorPage";
 import UseState from "../../pages/UseState";
+import CleanUp from "../../pages/CleanUp";
 
 import DefaultLayout from "../../layouts/DefaultLayout";
 import PageLayout from "../../layouts/PageLayout";
-
 import SidebarLayout from "../../layouts/SidebarLayout";
+
+const titles = {
+  "/": "Trang chủ",
+  "/about": "About",
+  "/news": "Tin tức",
+  "/terms-of-use": "Điều khoản sử dụng",
+  "/refund-policy": "Chính sách hoàn trả",
+  "/privacy": "Chính sách bảo mật",
+};
 
 function AppRoutes() {
   return (
     <Router>
       <Routes>
-        <Route element={<DefaultLayout />}>
+        <Route element={<DefaultLayout titles={titles} />}>
           <Route index element={<Home />} />
           <Route path="/news" element={<News />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/posts/:id" element={<PostDetail />} />
-
           <Route path="*" element={<ErrorPage />} />
+          <Route path="clean-up" element={<CleanUp />} />
         </Route>
 
         <Route path="/page" element={<PageLayout />}>

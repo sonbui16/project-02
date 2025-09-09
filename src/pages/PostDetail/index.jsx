@@ -15,7 +15,10 @@ function PostDetail() {
         }
         return response.json();
       })
-      .then((json) => setData(json));
+      .then((json) => {
+        setData(json);
+        document.title = json.title;
+      });
   }, []);
   return <div>{data.title}</div>;
 }
