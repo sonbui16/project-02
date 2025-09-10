@@ -18,6 +18,7 @@ import PostDetail from "../../pages/PostDetail";
 import ErrorPage from "../../pages/ErrorPage";
 import UseState from "../../pages/UseState";
 import CleanUp from "../../pages/CleanUp";
+import ProductsDetail from "../../pages/ProductsDetail";
 
 import DefaultLayout from "../../layouts/DefaultLayout";
 import PageLayout from "../../layouts/PageLayout";
@@ -41,20 +42,18 @@ function AppRoutes() {
           <Route path="/news" element={<News />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/posts/:id" element={<PostDetail />} />
+          <Route path="/products/:slug" element={<ProductsDetail />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="clean-up" element={<CleanUp />} />
-        </Route>
-
+        </Route> 
         <Route path="/page" element={<PageLayout />}>
           <Route path="terms-of-use" element={<TermsOfUse />} />
           <Route path="refund-policy" element={<RefundPolicy />} />
           <Route path="privacy" element={<Privacy />} />
         </Route>
-
         <Route element={<SidebarLayout />}>
           {/* <Route path="/about" element={<About />} /> */}
         </Route>
-
         <Route path="use-state" element={<UseState />} />
       </Routes>
     </Router>

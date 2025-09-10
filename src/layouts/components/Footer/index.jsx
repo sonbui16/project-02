@@ -25,17 +25,17 @@ function Footer() {
                 </Link>
               </li>
               <li className={styles.footer__item}>
-                <Link to="/refund-policy" className={styles.footer__link}>
+                <Link to="/page/refund-policy" className={styles.footer__link}>
                   Chính sách đổi trả
                 </Link>
               </li>
               <li className={styles.footer__item}>
-                <Link to="/privacy" className={styles.footer__link}>
+                <Link to="/page/privacy" className={styles.footer__link}>
                   Chính sách bảo mật
                 </Link>
               </li>
               <li className={styles.footer__item}>
-                <Link to="/terms-of-use" className={styles.footer__link}>
+                <Link to="/page/terms-of-use" className={styles.footer__link}>
                   Điều khoản dịch vụ
                 </Link>
               </li>
@@ -148,7 +148,6 @@ function Footer() {
                   </a>
                 </blockquote>
               </div>
-             
             </div>
           </div>
         </div>
