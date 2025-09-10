@@ -1,0 +1,16 @@
+.no_container {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+}
+.full_width {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+    padding: 20px 0;
+}
+.carousel-inner img {
+    max-width: 100%;
+}
