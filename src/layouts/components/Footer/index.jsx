@@ -2,8 +2,15 @@ import styles from "./Footer.module.css";
 import bocongthuong from "../../../assets/images/bocongthuong.png";
 
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 function Footer() {
+  useEffect(() => {
+    // Load the Facebook SDK script
+    if (window.FB) {
+      window.FB.XFBML.parse();
+    }
+  }, []);
   return (
     <footer className="">
       <hr className="my-5" />
@@ -121,28 +128,27 @@ function Footer() {
           <div className="col-3">
             <div className="">
               <h3 className={styles.footer__heading}>FANPAGE</h3>
-              <ul className={styles.footer__list}>
-                <li className={styles.footer__item}>
-                  <a href="#!" className={styles.footer__link}>
-                    Giới thiệu
+              <div
+                class="fb-page"
+                data-href="https://www.facebook.com/profile.php?id=61579803456004"
+                data-tabs=""
+                data-width=""
+                data-height=""
+                data-small-header="false"
+                data-adapt-container-width="true"
+                data-hide-cover="false"
+                data-show-facepile="true"
+              >
+                <blockquote
+                  cite="https://www.facebook.com/profile.php?id=61579803456004"
+                  class="fb-xfbml-parse-ignore"
+                >
+                  <a href="https://www.facebook.com/profile.php?id=61579803456004">
+                    Nôi Việt - Nâng Niu Giấc Ngủ Trẻ Thơ
                   </a>
-                </li>
-                <li className={styles.footer__item}>
-                  <a href="#!" className={styles.footer__link}>
-                    Chính sách đổi trả
-                  </a>
-                </li>
-                <li className={styles.footer__item}>
-                  <a href="#!" className={styles.footer__link}>
-                    Chính sách bảo mật
-                  </a>
-                </li>
-                <li className={styles.footer__item}>
-                  <a href="#!" className={styles.footer__link}>
-                    Điều khoản dịch vụ
-                  </a>
-                </li>
-              </ul>
+                </blockquote>
+              </div>
+             
             </div>
           </div>
         </div>
