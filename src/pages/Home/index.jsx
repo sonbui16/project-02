@@ -68,7 +68,7 @@ function Home() {
 
   return (
     <div className="">
-      {/* <div className={styles.full_width} >
+      <div className={styles.full_width} >
         <div id="carouselExampleIndicators" class="carousel slide">
           <div class="carousel-indicators">
             <button
@@ -122,8 +122,7 @@ function Home() {
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </div> */}
-
+      </div>
 
 
       <div className=" row">
