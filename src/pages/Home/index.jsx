@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import styles from "./Home.module.css";
-import carouse2 from '../../assets/images/carouse2.png';
-import carouse1 from '../../assets/images/carouse1.jpg';
-
-
+import carouse2 from "../../assets/images/carouse2.png";
+import carouse1 from "../../assets/images/carouse1.jpg";
+import design from "../../assets/images/design.jpg";
 
 const data2 = [
   {
@@ -68,7 +67,7 @@ function Home() {
 
   return (
     <div className="">
-      <div className={styles.full_width} >
+      <div className={styles.full_width}>
         <div id="carouselExampleIndicators" class="carousel slide">
           <div class="carousel-indicators">
             <button
@@ -124,8 +123,7 @@ function Home() {
         </div>
       </div>
 
-
-      <div className=" row">
+      <div className="row">
         {data2.map((item, index) => {
           return (
             <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
@@ -144,6 +142,35 @@ function Home() {
             </div>
           );
         })}
+      </div>
+
+      <div className="">
+        <p className="">Danh mục Sản Phẩm</p>
+        <p className="">Chưa có j cả</p>
+      </div>
+
+      <div className="row">
+        <div className="col-6">
+          <img
+            style={{ width: "100%", height: "auto" }}
+            src={design}
+            alt=""
+            className=""
+          />
+        </div>
+        <div className="col-6">
+          <p className="">Tuỳ chỉnh do bạn </p>
+          <p className="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Dignissimos, deleniti Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Tenetur, quis quia. Odit corporis porro
+            voluptatem. Deleniti odio pariatur veniam voluptatem! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Dignissimos, deleniti
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur,
+            quis quia. Odit corporis porro voluptatem. Deleniti odio pariatur
+            veniam voluptatem!
+          </p>
+        </div>
       </div>
     </div>
   );
