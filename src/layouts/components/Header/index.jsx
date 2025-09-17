@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "../Navigation";
 // import {} from '../../../assets/images/logo.png';
-import logo from "../../../assets/images/logo.jpg";
+import logo from "../../../assets/images/logo.png";
 function Header() {
   return (
     <header className="container header">
@@ -12,7 +12,7 @@ function Header() {
               src={logo}
               alt="Nôi Việt"
               className=""
-              style={{ width: "100px", height: "auto" }}
+              style={{ width: "200px", height: "auto" }}
             />
           </a>
         </div>

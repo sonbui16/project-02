@@ -2,8 +2,9 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router";
 import styles from "./Navigation.module.css";
 
 const navItem = [
-  { to: "/", label: "Giới thiệu" },
-  { to: "/about", label: "Bộ sưu tập" },
+  { to: "/", label: "Trang chủ" },
+  { to: "/about", label: "Giới thiệu"},
+  { to: "/category", label: "Danh mục"},
   { to: "/news", label: "Tin tức" },
   { to: "/systems", label: "Hệ thống" },
 
