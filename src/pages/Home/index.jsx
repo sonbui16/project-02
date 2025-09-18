@@ -8,38 +8,33 @@ import logo1 from "../../assets/images/logo1.jpg";
 import logo2 from "../../assets/images/logo2.jpg";
 import logo3 from "../../assets/images/logo3.jpg";
 import logo4 from "../../assets/images/logo4.jpg";
-
-
+import demo1 from "../../assets/images/demo1.jpg";
 
 const data1 = [
   {
     id: 1,
     title: "Logo",
     img: logo1,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?"
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?",
   },
   {
     id: 2,
     title: "Packaging",
     img: logo2,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?"
-
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?",
   },
   {
     id: 3,
     title: "Shap & Color",
     img: logo3,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?"
-
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?",
   },
   {
     id: 4,
     title: "Manual",
     img: logo4,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?"
-
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?",
   },
-
 ];
 
 const data2 = [
@@ -91,6 +86,40 @@ const data2 = [
     priceSale: 900,
     img: "https://chilux.vn/wp-content/uploads/2023/02/COMBO-1-1-600x600.jpg",
     slug: "giuong-go-cho-be-chilux",
+  },
+];
+const category = [
+  {
+    id: 1,
+    img: logo1,
+  },
+  {
+    id: 2,
+    img: logo2,
+  },
+  {
+    id: 3,
+    img: logo3,
+  },
+  {
+    id: 4,
+    img: logo4,
+  },
+  {
+    id: 1,
+    img: logo1,
+  },
+  {
+    id: 2,
+    img: logo2,
+  },
+  {
+    id: 3,
+    img: logo3,
+  },
+  {
+    id: 4,
+    img: logo4,
   },
 ];
 
@@ -183,7 +212,17 @@ function Home() {
 
       <div className="">
         <p className="">Danh mục Sản Phẩm</p>
-        <p className="">Chưa có j cả</p>
+        <div className="row">
+          {category.map((item, index) => {
+            return (
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <div class="card">
+                  <img src={item.img} class="card-img-top" alt="..." />
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <div className="row">
@@ -196,22 +235,36 @@ function Home() {
           />
         </div>
         <div className="col-6">
-          <p className="">Tuỳ chỉnh do bạn </p>
+          <p
+            className=""
+            style={{ color: "#5F5139", fontWeight: "bold", fontSize: "30px" }}
+          >
+            Tùy chỉnh cho thương hiệu, thị trường và khách hàng của bạn{" "}
+          </p>
           <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Dignissimos, deleniti Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Tenetur, quis quia. Odit corporis porro
-            voluptatem. Deleniti odio pariatur veniam voluptatem! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Dignissimos, deleniti
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur,
-            quis quia. Odit corporis porro voluptatem. Deleniti odio pariatur
-            veniam voluptatem!
+            Hãy giúp dòng sản phẩm đồ nội thất phòng trẻ em và nhiều sản phẩm
+            dành cho trẻ em khác của bạn dễ tiếp thị hơn và được khách hàng yêu
+            thích hơn với đầy đủ các tùy chọn tùy chỉnh của Craft Child!
+          </p>
+          <p className="">
+            Đội ngũ thiết kế và thợ thủ công chuyên nghiệp của chúng tôi có thể
+            giúp tạo ra những thiết kế sản phẩm dành cho trẻ em thiết thực và ấn
+            tượng, đồng thời gửi bản vẽ 3D để bạn xác nhận.
+          </p>
+          <p className="">
+            Bạn cũng được tự do lựa chọn màu sắc, chất liệu và bao bì để làm nổi
+            bật thương hiệu của mình. Hơn nữa, chúng tôi thậm chí có thể cung
+            cấp mẫu sản phẩm để bạn trực tiếp trải nghiệm chất lượng thương hiệu
+            của chúng tôi.
           </p>
         </div>
       </div>
 
       <div className="">
-        <p className="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, doloremque?</p>
+        <p className="text-center">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+          doloremque?
+        </p>
         <div className="row">
           {data1.map((item, index) => {
             return (
@@ -220,9 +273,7 @@ function Home() {
                   <img src={item.img} class="card-img-top" alt="..." />
                   <div class="p-2">
                     <h5 class="card-title">{item.title}</h5>
-                    <p class="card-text">
-                      {item.desc}
-                    </p>
+                    <p class="card-text">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -232,36 +283,38 @@ function Home() {
       </div>
 
       <div className="">
+        <p className="text-center">Sản phẩm dành cho bé Luôn bên bạn</p>
         <p className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique.
+          Là nhà sản xuất đồ nội thất trẻ em bán buôn hàng đầu với 23 năm kinh
+          nghiệm, Craft Child cung cấp các sản phẩm nôi, nôi em bé, giường gỗ,
+          xe tập đi, ghế ăn dặm và các sản phẩm dành cho trẻ em khác đến thị
+          trường mục tiêu của bạn. Cam kết mang đến sự hài lòng cho bạn và khách
+          hàng, Craft Child tận dụng chuyên môn của mình trong sản xuất sản phẩm
+          OEM/ODM cho trẻ em với các quy trình kiểm soát chất lượng nghiêm ngặt
+          để đảm bảo bạn chỉ nhận được những sản phẩm tốt nhất.
         </p>
-        <p className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Error temporibus laborum cum rem fugit expedita aperiam dolor, placeat magni
-          vel deserunt quo nostrum. Enim ab non ipsa obcaecati. Minima, laborum laboriosam fuga officiis reprehenderit
-          nobis omnis. Aliquam dicta similique ducimus consequuntur quod deserunt quas non, labore perspiciatis c
-          onsectetur, facere, tempora nesciunt quo? Nulla odit tempore, voluptatum rerum numquam facere nobis? Maxim
-          e aliquam, praesentium architecto eaque aut illo corrupti hic quas totam, animi nesciunt nobis magni laborio
-          sam quam veritatis ab sit laudantium! Veritatis consequuntur labore possimus? Rerum hic ratione quibusdam lab
-          oriosam, magni aliquam magnam et quisquam incidunt dolorum consequatur maiores facilis?
-        </p>
+        <img src={demo1} alt="" className="" />
       </div>
 
-
-
-       <div className="">
+      <div className="">
         <p className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          similique.
         </p>
         <p className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Error temporibus laborum cum rem fugit expedita aperiam dolor, placeat magni
-          vel deserunt quo nostrum. Enim ab non ipsa obcaecati. Minima, laborum laboriosam fuga officiis reprehenderit
-          nobis omnis. Aliquam dicta similique ducimus consequuntur quod deserunt quas non, labore perspiciatis c
-          onsectetur, facere, tempora nesciunt quo? Nulla odit tempore, voluptatum rerum numquam facere nobis? Maxim
-          e aliquam, praesentium architecto eaque aut illo corrupti hic quas totam, animi nesciunt nobis magni laborio
-          sam quam veritatis ab sit laudantium! Veritatis consequuntur labore possimus? Rerum hic ratione quibusdam lab
-          oriosam, magni aliquam magnam et quisquam incidunt dolorum consequatur maiores facilis?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          similique Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Error temporibus laborum cum rem fugit expedita aperiam dolor, placeat
+          magni vel deserunt quo nostrum. Enim ab non ipsa obcaecati. Minima,
+          laborum laboriosam fuga officiis reprehenderit nobis omnis. Aliquam
+          dicta similique ducimus consequuntur quod deserunt quas non, labore
+          perspiciatis c onsectetur, facere, tempora nesciunt quo? Nulla odit
+          tempore, voluptatum rerum numquam facere nobis? Maxim e aliquam,
+          praesentium architecto eaque aut illo corrupti hic quas totam, animi
+          nesciunt nobis magni laborio sam quam veritatis ab sit laudantium!
+          Veritatis consequuntur labore possimus? Rerum hic ratione quibusdam
+          lab oriosam, magni aliquam magnam et quisquam incidunt dolorum
+          consequatur maiores facilis?
         </p>
       </div>
     </div>
