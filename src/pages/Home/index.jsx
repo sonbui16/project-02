@@ -4,6 +4,43 @@ import styles from "./Home.module.css";
 import carouse2 from "../../assets/images/carouse2.png";
 import carouse1 from "../../assets/images/carouse1.jpg";
 import design from "../../assets/images/design.jpg";
+import logo1 from "../../assets/images/logo1.jpg";
+import logo2 from "../../assets/images/logo2.jpg";
+import logo3 from "../../assets/images/logo3.jpg";
+import logo4 from "../../assets/images/logo4.jpg";
+
+
+
+const data1 = [
+  {
+    id: 1,
+    title: "Logo",
+    img: logo1,
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?"
+  },
+  {
+    id: 2,
+    title: "Packaging",
+    img: logo2,
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?"
+
+  },
+  {
+    id: 3,
+    title: "Shap & Color",
+    img: logo3,
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?"
+
+  },
+  {
+    id: 4,
+    title: "Manual",
+    img: logo4,
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?"
+
+  },
+
+];
 
 const data2 = [
   {
@@ -171,6 +208,61 @@ function Home() {
             veniam voluptatem!
           </p>
         </div>
+      </div>
+
+      <div className="">
+        <p className="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, doloremque?</p>
+        <div className="row">
+          {data1.map((item, index) => {
+            return (
+              <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <div class="card">
+                  <img src={item.img} class="card-img-top" alt="..." />
+                  <div class="p-2">
+                    <h5 class="card-title">{item.title}</h5>
+                    <p class="card-text">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="">
+        <p className="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique.
+        </p>
+        <p className="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Error temporibus laborum cum rem fugit expedita aperiam dolor, placeat magni
+          vel deserunt quo nostrum. Enim ab non ipsa obcaecati. Minima, laborum laboriosam fuga officiis reprehenderit
+          nobis omnis. Aliquam dicta similique ducimus consequuntur quod deserunt quas non, labore perspiciatis c
+          onsectetur, facere, tempora nesciunt quo? Nulla odit tempore, voluptatum rerum numquam facere nobis? Maxim
+          e aliquam, praesentium architecto eaque aut illo corrupti hic quas totam, animi nesciunt nobis magni laborio
+          sam quam veritatis ab sit laudantium! Veritatis consequuntur labore possimus? Rerum hic ratione quibusdam lab
+          oriosam, magni aliquam magnam et quisquam incidunt dolorum consequatur maiores facilis?
+        </p>
+      </div>
+
+
+
+       <div className="">
+        <p className="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique.
+        </p>
+        <p className="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Error temporibus laborum cum rem fugit expedita aperiam dolor, placeat magni
+          vel deserunt quo nostrum. Enim ab non ipsa obcaecati. Minima, laborum laboriosam fuga officiis reprehenderit
+          nobis omnis. Aliquam dicta similique ducimus consequuntur quod deserunt quas non, labore perspiciatis c
+          onsectetur, facere, tempora nesciunt quo? Nulla odit tempore, voluptatum rerum numquam facere nobis? Maxim
+          e aliquam, praesentium architecto eaque aut illo corrupti hic quas totam, animi nesciunt nobis magni laborio
+          sam quam veritatis ab sit laudantium! Veritatis consequuntur labore possimus? Rerum hic ratione quibusdam lab
+          oriosam, magni aliquam magnam et quisquam incidunt dolorum consequatur maiores facilis?
+        </p>
       </div>
     </div>
   );
