@@ -19,6 +19,8 @@ import ErrorPage from "../../pages/ErrorPage";
 import UseState from "../../pages/UseState";
 import CleanUp from "../../pages/CleanUp";
 import ProductsDetail from "../../pages/ProductsDetail";
+import Contact from "../../pages/Contact";
+
 
 import DefaultLayout from "../../layouts/DefaultLayout";
 import PageLayout from "../../layouts/PageLayout";
@@ -45,6 +47,7 @@ function AppRoutes() {
           <Route path="/products/:slug" element={<ProductsDetail />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="clean-up" element={<CleanUp />} />
+          <Route path="/contact" element={<Contact />} />
         </Route> 
         <Route path="/page" element={<PageLayout />}>
           <Route path="terms-of-use" element={<TermsOfUse />} />

@@ -1,0 +1,28 @@
+.formGroup {}
+
+.label {
+    display: block;
+}
+
+.input {
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 4px 8px;
+}
+
+.formGroup+.formGroup {
+    margin-top: 10px;
+}
+
+.coverImg {
+    /* height: 300px; */
+    min-height: 300px;
+    min-width: 350px;
+    background-color: red;
+    display: inline-block;
+    font-style:italic;
+    text-transform:capitalize;
+    text-decoration: line-through;
+
+    text-align: center; /* Căn giữa chữ, block, */
+}

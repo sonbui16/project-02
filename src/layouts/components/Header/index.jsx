@@ -1,7 +1,10 @@
 import React from "react";
+import { Link } from "react-router";
+
 import Navigation from "../Navigation";
 // import {} from '../../../assets/images/logo.png';
 import logo from "../../../assets/images/logo.png";
+
 function Header() {
   return (
     <header className="container header">
@@ -18,8 +21,10 @@ function Header() {
         </div>
 
         <Navigation />
+          <Link className="col-2" to="/contact">Giới thiệu</Link>
 
-        <div className="col-2">Hotline1</div>
+        {/* <Link to="/about-us">Giới thiệu</Link>
+        <div className="col-2">Liên hệ</div> */}
       </div>
     </header>
   );
