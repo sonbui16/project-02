@@ -5,6 +5,8 @@
 
 :root {
    --primary-color: #F44336;
+   --white-color: #FFFFFF;
+   --black-color: #000000;
 }
 
 html {

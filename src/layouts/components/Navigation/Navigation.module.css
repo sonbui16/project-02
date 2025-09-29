@@ -1,14 +1,71 @@
-.wrapper ul {
+.wrapper {
     display: flex;
+    /* background-color: red; */
+
+}
+
+.header {
+    background-color: yellow;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* padding: 10px 0; */
+    /* height: 80px; */
 }
 
 .navItem {
-    padding: 8px 18px;
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 1
+    /* padding: 8px 18px; */
+    /* font-size: 1.6re ; */
+    /* font-weight: 500; */
+    /* line-height: 1; */
+}
+
+.nav {
+    background-color: red;
 }
 
 .active {
-    color: red;
+    color: black;
+}
+
+/* .label {
+    color: black;
+    background-color: orange;
+    padding:  20px 
+} */
+.active:hover {
+    color: var(--primary-color);
+}
+
+.submenu a {
+    /* display: none; */
+    /* display: flex; */
+    /* height: 44px; */
+    /* padding: 10px; */
+    background-color: var(--white-color);
+    display: flex;
+
+}
+
+.navItem {
+    position: relative;
+    /* padding: 20px 18px; */
+}
+
+.submenu {
+    position: absolute;
+    /* background-color: red; */
+    display: none;
+    left: 0;
+    z-index: 1;
+
+
+}
+
+.navItem:hover .submenu {
+    display: block;
+}
+.submenu1 {
+    display: flex;
+    width: 500px;
 }

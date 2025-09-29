@@ -40,6 +40,7 @@ function AppRoutes() {
     <Router>
       <Routes>
         <Route element={<DefaultLayout titles={titles} />}>
+          <Route path="/contact" element={<Contact />} />
           <Route index element={<Home />} />
           <Route path="/news" element={<News />} />
           <Route path="/about-us" element={<About />} />
@@ -47,7 +48,6 @@ function AppRoutes() {
           <Route path="/products/:slug" element={<ProductsDetail />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="clean-up" element={<CleanUp />} />
-          <Route path="/contact" element={<Contact />} />
         </Route> 
         <Route path="/page" element={<PageLayout />}>
           <Route path="terms-of-use" element={<TermsOfUse />} />
