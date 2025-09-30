@@ -9,9 +9,9 @@ const navItem = [
       { label: "Column 1", to: "/category/col1" },
       { label: "Column 2", to: "/category/col2" },
       { label: "Column 3", to: "/category/col3" },
-      { label: "Column 3", to: "/category/col3" },
-      { label: "Column 3", to: "/category/col3" },
-      { label: "Column 3", to: "/category/col3" },
+      { label: "Column 3", to: "/category/col4" },
+      { label: "Column 3", to: "/category/col5" },
+      { label: "Column 3", to: "/category/col6" },
     ],
   },
   { to: "/about", label: "GIỚI THIỆU" },
@@ -30,8 +30,8 @@ const navItem = [
 
 function Navigation() {
   return (
-    <div className="col-8">
-      <nav>
+    <div className="bg-success ">
+      <nav className="">
         <ul className={styles.wrapper}>
           {navItem.map((item) => (
             <li key={item.to} className={styles.navItem}>

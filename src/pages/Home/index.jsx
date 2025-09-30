@@ -106,19 +106,19 @@ const category = [
     img: logo4,
   },
   {
-    id: 1,
+    id: 5,
     img: logo1,
   },
   {
-    id: 2,
+    id: 6,
     img: logo2,
   },
   {
-    id: 3,
+    id: 7,
     img: logo3,
   },
   {
-    id: 4,
+    id: 8,
     img: logo4,
   },
 ];
@@ -135,12 +135,12 @@ function Home() {
     <div className="">
       <div className={styles.full_width}>
         <div id="carouselExampleIndicators" class="carousel slide">
-          <div class="carousel-indicators">
+          <div className="carousel-indicators">
             <button
               type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="0"
-              class="active"
+              className="active"
               aria-current="true"
               aria-label="Slide 1"
             ></button>

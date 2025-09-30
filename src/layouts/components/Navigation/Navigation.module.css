@@ -1,11 +1,13 @@
 .wrapper {
     display: flex;
+    /* background-color: pink; */
+    justify-content:space-between;
     /* background-color: red; */
 
 }
 
 .header {
-    background-color: yellow;
+    background-color: rgb(229, 10, 134);
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: space-between; */
@@ -14,7 +16,7 @@
 }
 
 .navItem {
-    /* padding: 8px 18px; */
+    padding: 10px 18px;
     /* font-size: 1.6re ; */
     /* font-weight: 500; */
     /* line-height: 1; */

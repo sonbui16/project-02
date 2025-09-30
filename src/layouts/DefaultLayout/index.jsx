@@ -21,9 +21,9 @@ function DefaultLayout({titles} ) {
   return (
     <div className="">
       <Header />
-      {/* <main className="">
+      <main className="">
         <Outlet />
-      </main> */}
+      </main>
       <Footer />
     </div>
   );
