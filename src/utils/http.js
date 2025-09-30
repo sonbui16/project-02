@@ -1,0 +1,30 @@
+import axios from 'axios';
+const httpClient = axios.create({
+    baseURL: 'https://jsonplaceholder.typicode.com',
+});
+const _send = async (method, path, data, config) => {
+    const response = await httpClient.request({
+        ...config,
+        method,
+        url: path,
+        data,
+    })
+    return response.data
+}
+const get = async (path, config) => {
+    return await _send("get", path, null, config);
+}
+const post = async (path, data, config) => {
+    return await _send("post", path, data, config);
+}
+const put = async (path, data, config) => {
+    return await _send("put", path, data, config);
+}
+const path = async (path, data, config) => {
+    return await _send("patch", path, data, config);
+}
+const del = async (path, config) => {
+    return await _send("patch", path, null, config);
+}
+const http = { get, post, put, path, del }
+export default http
