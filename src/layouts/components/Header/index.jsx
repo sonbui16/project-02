@@ -8,26 +8,29 @@ import styles from "./Header.module.css";
 
 function Header() {
   return (
-    <header className="container align-content-center">
-      <div class="row">
-        <div className="col-xl-2 col-lg-4 col-md-6">
+    <header className="container bg-secondary">
+      <div className="row">
+        <div className="bg-success col">
           <a href="/">
-            <img
+            {/* <img
               src={logo}
               alt="Nôi Việt"
               className=""
               style={{ width: "200px", height: "auto" }}
-            />
+            /> */}
+            Logo
           </a>
         </div>
-        <div className="col-xl-8 col-lg-6  d-none d-lg-block">
+
+        <div className="col bg-danger col-xxl-7 d-none d-xl-block">
           <Navigation />
         </div>
 
-        <div className="col-xl-2 col-lg-2 col-md-6">
-          <Link to="/contact">Giới thiệu1</Link>
+        <div className="bg-success col ">
+          <Link to="/contact">Liên hệ</Link>
         </div>
-      </div>
+
+</div>
       {/* <Link to="/about-us">Giới thiệu</Link>
         <div className="col-2">Liên hệ</div> */}
     </header>

@@ -14,9 +14,9 @@ function Footer() {
   return (
     <footer className="">
       <hr className="my-5" />
-      <div className="container">
+      <div className="container ">
         <div className="row">
-          <div className="col-3">
+          <div className="col-6 col-lg-3">
             <h3 className={styles.footer__heading}>GIỚI THIỆU</h3>
             <ul className={styles.footer__list}>
               <li className={styles.footer__item}>
@@ -41,7 +41,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-3">
+          <div className="col-6 col-lg-3">
             <h3 className={styles.footer__heading}>THÔNG TIN CÔNG TY</h3>
             <ul className={styles.footer__list}>
               <li className={styles.footer__item}>
@@ -98,7 +98,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-3">
+          <div className="col-6 col-lg-3">
             <div className="">
               <h3 className={styles.footer__heading}>HỆ THỐNG CỬA HÀNG</h3>
               <ul className={styles.footer__list}>
@@ -125,15 +125,12 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="col-3">
-            <div className="">
+          <div className="col-6 col-lg-3">
               <h3 className={styles.footer__heading}>FANPAGE</h3>
               <div
                 class="fb-page"
                 data-href="https://www.facebook.com/profile.php?id=61579803456004"
-                data-tabs=""
-                data-width=""
-                data-height=""
+                data-width="340px"
                 data-small-header="false"
                 data-adapt-container-width="true"
                 data-hide-cover="false"
@@ -148,12 +145,11 @@ function Footer() {
                   </a>
                 </blockquote>
               </div>
-            </div>
           </div>
         </div>
       </div>
       <hr className="" />
-      <div className="container d-flex justify-content-between p-5">
+      <div className="container d-flex justify-content-between">
         <div>Nôi Việt</div>
         <div className="d-flex flex-row align-items-center">
           <span> © 2025 - Powered by NoiViet </span>
@@ -166,19 +162,6 @@ function Footer() {
         </div>
       </div>
     </footer>
-
-    // <footer className="">
-    //   <hr className="my-5" />
-    //   <div className="container">
-    //     <div className="row">
-    //       <div className="col-3">
-    //         <h3  className={styles.footer__heading}>
-    //           GIỚI THIỆU
-    //         </h3>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </footer>
   );
 }
 export default Footer;
