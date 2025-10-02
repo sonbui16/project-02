@@ -26,11 +26,13 @@ const navItem = [
   },
   { to: "/news", label: "TIN TỨC" },
   { to: "/systems", label: "HỆ THỐNG" },
+  { to: "/systems", label: "HỆ 2" },
+
 ];
 
 function Navigation() {
   return (
-    <div className="bg-success ">
+    <div className=" ">
       <nav className="">
         <ul className={styles.wrapper}>
           {navItem.map((item) => (

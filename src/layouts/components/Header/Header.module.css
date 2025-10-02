@@ -3,3 +3,32 @@
     /* background-color: red; */
     align-items: center;
 }
+
+.form {
+    display: flex; ;
+    /* align-items: center; */
+    background-color: #f4f4f4;
+    /* border-radius:   20px; */
+    /* border-width: 20px; */
+    padding: 7px 15px;
+    justify-content: space-between;
+    border-radius: 7px;
+}
+.searchBox {
+    border:none;
+    outline: none;
+    /* background-color: #ff0000; */
+    width: 95%;
+}
+.search {
+    border:none;
+    outline: none;
+    /* display: inline-block; */
+    width: 100%;
+    background-color:transparent;
+    font-size:1.4rem
+}
+.account {
+    display: flex;
+    column-gap: 20px;
+}
