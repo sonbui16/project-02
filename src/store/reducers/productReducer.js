@@ -3,7 +3,6 @@ const initState = {
 }
 
 const productReducer = (state = initState, action) => {
-    console.log("12",state, action);
     
     switch (action.type) {
         case "product::set-list":
