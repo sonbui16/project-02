@@ -11,7 +11,7 @@ import { getList as getProductList } from "@/services/product/productService";
 import { selectProductList } from "@/features/product/productSlice";
 import { useProductList, useFetchProductList } from "@/features/product";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-
+import Button from '@mui/material/Button';
 function Contact() {
   useFetchProductList();
   const products = useProductList();
@@ -19,6 +19,8 @@ function Contact() {
 
   return (
     <div>
+      <Button variant="contained">Hello world</Button>
+      <Button disabled variant="outlined">Outlined</Button>
       <p>Đây là trang liên hệ.</p>
         <FontAwesomeIcon icon={faYoutube} className="text-success fs-1" />
         <FontAwesomeIcon icon={faMagnifyingGlass} className="text-success fs-3" />

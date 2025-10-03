@@ -137,7 +137,7 @@ function Home() {
         <div id="carouselExampleIndicators" class="carousel slide">
           <div className="carousel-indicators">
             <button
-              type="button"
+                                                                                                                                                                                                                                                                                                                                                                              type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="0"
               className="active"

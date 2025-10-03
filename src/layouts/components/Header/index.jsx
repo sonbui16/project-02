@@ -5,19 +5,26 @@ import Navigation from "../Navigation";
 import images from "@/assets/images";
 import styles from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faMagnifyingGlass, faUserPen , faHeart, faBasketShopping } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  faUserPen,
+  faHeart,
+  faBasketShopping,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   return (
-    <header className="container ">
-      <div className="row  align-items-center">
-        <div className="col">
+    <header className=" justify-content-center">
+      <div className="container">
+      <div className="row py-3 align-items-center">
+        <div className="col justify-content-start d-flex">
           <a href="/">
             <img
               src={images.logo1}
               alt="Nôi Việt"
               className=""
-              style={{ width: "100px", height: "auto" }}
+              style={{ width: "150px", height: "auto" }}
             />
           </a>
         </div>
@@ -32,43 +39,39 @@ function Header() {
               />
             </div>
             <div className="">
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                className=" fs-3"
-              />
+              <FontAwesomeIcon icon={faMagnifyingGlass} className=" fs-3" />
             </div>
           </form>
         </div>
 
-        <div className="col ">
+        <div className="col">
           <div className={styles.account}>
-            <div className="">
-              <span>Tài khoản</span>
-              <FontAwesomeIcon
-                icon={faUserPen}
-                className=" fs-3"
-              />
+            <div className={styles.icon}>
+              <span className="d-xl-block d-none">Tài khoản</span>
+              <FontAwesomeIcon icon={faUserPen} className=" fs-3" />
             </div>
-            <div className="">
-              <span>Yêu thích</span>
-              <FontAwesomeIcon
-                icon={faHeart}
-                className=" fs-3"
-              />
+            <div className={styles.icon}>
+              <span className="d-xl-block d-none">Yêu thích</span>
+              <FontAwesomeIcon icon={faHeart} className=" fs-3" />
             </div>
-            <div className="">
-              <span>Giỏ hàng</span>
-              <FontAwesomeIcon
-                icon={faBasketShopping}
-                className=" fs-3"
-              />
+            <div className={styles.icon}>
+              <span className="d-xl-block d-none">Giỏ hàng</span>
+              <FontAwesomeIcon icon={faBasketShopping} className=" fs-3" />
+            </div>
+            <div className=" d-xl-none d-block">
+              <FontAwesomeIcon icon={faBars} className=" fs-3" />
             </div>
           </div>
         </div>
       </div>
-      <div className="col">
+      {/* d-none:Mặc định ẩn phần tử đó trên mọi kích thước màn hình. 
+      Khi màn hình ≥ 1200px (breakpoint xl) thì hiện phần tử dưới dạng display: block */}
+      <div className="d-xl-block d-none">
         <Navigation />
       </div>
+      </div>
+      <div className={styles.divider}></div>
+       {/* <hr className="" /> */}
     </header>
   );
 }

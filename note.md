@@ -7,3 +7,5 @@ I- Media query
 
 Mobile first: Mobile - Tablet - Desktop 
 Desktop first: Desktop - Tablet - Mobile
+
+3. css display property kiểm tra thuộc tính 

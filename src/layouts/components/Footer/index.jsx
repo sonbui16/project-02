@@ -128,7 +128,7 @@ function Footer() {
           <div className="col-6 col-lg-3">
               <h3 className={styles.footer__heading}>FANPAGE</h3>
               <div
-                class="fb-page"
+                className="fb-page"
                 data-href="https://www.facebook.com/profile.php?id=61579803456004"
                 data-width="340px"
                 data-small-header="false"
@@ -138,7 +138,7 @@ function Footer() {
               >
                 <blockquote
                   cite="https://www.facebook.com/profile.php?id=61579803456004"
-                  class="fb-xfbml-parse-ignore"
+                  className="fb-xfbml-parse-ignore"
                 >
                   <a href="https://www.facebook.com/profile.php?id=61579803456004">
                     Nôi Việt - Nâng Niu Giấc Ngủ Trẻ Thơ

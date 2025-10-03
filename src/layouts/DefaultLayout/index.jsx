@@ -22,7 +22,7 @@ function DefaultLayout({titles} ) {
     <div className="">
       <Header />
       <main className="">
-        <Outlet />
+        <Outlet />  
       </main>
       <Footer />
     </div>
