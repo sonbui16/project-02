@@ -22,9 +22,13 @@ import ProductsDetail from "../../pages/ProductsDetail";
 import Contact from "../../pages/Contact";
 
 
+
 import DefaultLayout from "../../layouts/DefaultLayout";
 import PageLayout from "../../layouts/PageLayout";
 import SidebarLayout from "../../layouts/SidebarLayout";
+
+import Login from '@/pages/Auth/Login';
+import Register from '@/pages/Auth/Register';
 
 const titles = {
   "/": "Trang chủ",
@@ -58,6 +62,8 @@ function AppRoutes() {
           {/* <Route path="/about" element={<About />} /> */}
         </Route>
         <Route path="use-state" element={<UseState />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );

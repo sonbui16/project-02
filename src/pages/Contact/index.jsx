@@ -20,7 +20,7 @@ function Contact() {
   return (
     <div>
       <Button variant="contained">Hello world</Button>
-      <Button disabled variant="outlined">Outlined</Button>
+      <Button disabled  variant="outlined">Outlined</Button>
       <p>Đây là trang liên hệ.</p>
         <FontAwesomeIcon icon={faYoutube} className="text-success fs-1" />
         <FontAwesomeIcon icon={faMagnifyingGlass} className="text-success fs-3" />
