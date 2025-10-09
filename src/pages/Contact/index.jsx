@@ -17,13 +17,23 @@ function Contact() {
   const products = useProductList();
   console.log(products);
 
+  setTimeout(() => { }, 10000)
+  const name = new Promise( (resole, reject) =>{
+    setTimeout(() =>{
+      reject("ád")
+    })
+  })
+
+  name
+  .then((vale) =>{})
+  .catch(() =>{})
   return (
     <div>
       <Button variant="contained">Hello world</Button>
-      <Button disabled  variant="outlined">Outlined</Button>
+      <Button disabled variant="outlined">Outlined</Button>
       <p>Đây là trang liên hệ.</p>
-        <FontAwesomeIcon icon={faYoutube} className="text-success fs-1" />
-        <FontAwesomeIcon icon={faMagnifyingGlass} className="text-success fs-3" />
+      <FontAwesomeIcon icon={faYoutube} className="text-success fs-1" />
+      <FontAwesomeIcon icon={faMagnifyingGlass} className="text-success fs-3" />
 
     </div>
   );
