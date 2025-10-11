@@ -4,6 +4,9 @@ import storage from "redux-persist/lib/storage";
 import { counterSlice } from "@/features/counter";
 import { productSlice } from "@/features/product";
 
+console.log("productSlice", counterSlice, productSlice );
+
+
 const persistConfig = {
   key: "root",
   storage,

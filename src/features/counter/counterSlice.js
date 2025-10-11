@@ -20,5 +20,9 @@ export const counterSlice = createSlice({
 });
 export const {increment, decrement, incrementByAmount } = counterSlice.actions;
 export const {reducerPath} = counterSlice;
-// export const selectCount = (state) => state[reducerPath].value;
+
+export const selectCouter = (state) => state[reducerPath].value;
+
+
+
 export default counterSlice; 

@@ -29,6 +29,7 @@ import SidebarLayout from "../../layouts/SidebarLayout";
 
 import Login from '@/pages/Auth/Login';
 import Register from '@/pages/Auth/Register';
+import Loading from "../Loading";
 
 const titles = {
   "/": "Trang chủ",
@@ -42,6 +43,7 @@ const titles = {
 function AppRoutes() {
   return (
     <Router>
+      <Loading />
       <Routes>
         <Route element={<DefaultLayout titles={titles} />}>
           <Route path="/contact" element={<Contact />} />

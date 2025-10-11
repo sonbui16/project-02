@@ -1,12 +1,9 @@
-import {
+import { useLoading } from "@/features/loading/hooks";
 
-} from './Loading/module.css'
+
+
 function Loading() {
-    return (
-       <div >
-
-</div>
-    )
-
+    const loading = useLoading();
+  return <div>{loading ? "Loading..." : "Content Loaded"}</div>;
 }
-export default Loading
+export default Loading;

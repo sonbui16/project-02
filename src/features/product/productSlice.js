@@ -4,7 +4,6 @@ const initialState = {
   list: [],
   loading: false,
 };
-
 export const productSlice = createSlice({
   name: "product",
   initialState,
@@ -13,17 +12,20 @@ export const productSlice = createSlice({
       state.list = action.payload;  
     },
   },
+
   extraReducers: (builder) => {
     builder
-    .addCase(getList.pending, (state) => {
-        state.loading = true;
+    .addCase(getList.pending, () => {
+      // dispatch(showLoading());
     })
     .addCase(getList.fulfilled, (state, action) => {
         state.list = action.payload;
-        state.loading = false;
+        // dispatch(hideLoading());
     })
     .addCase(getList.rejected, (state) => {
         state.loading = false;
+        // dispatch(hideLoading());
+
     });
   }
 
