@@ -15,15 +15,12 @@ import Button from "@mui/material/Button";
 import { useCounter } from "@/features/counter/hooks";
 
 function Contact() {
-
-  // const sonbh = getProductList();
-  // useFetchProductList();
+  // getProductList();
+  useFetchProductList();
   // console.log("sonbh123", sonbh);
-  // const products = useProductList();
-  // console.log(products);
+  useProductList();
 
-  const couter1 = useCounter()
-  console.log("couter1", couter1);
+  // const couter1 = useCounter()
   return (
     <div>
       <Button variant="contained">Hello world</Button>

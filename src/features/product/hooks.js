@@ -9,6 +9,7 @@ export const useFetchProductList = () => {
 
   useEffect(() => {
     dispatch(getProductList());
+    
   }, [dispatch]);
 };
 //dispatch hkhông bị thay đổi

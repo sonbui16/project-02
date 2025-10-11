@@ -27,7 +27,8 @@ export const productSlice = createSlice({
         // dispatch(hideLoading());
 
     });
-  }
+  },
+  
 
 });
 export const {reducerPath} = productSlice;
