@@ -15,25 +15,25 @@ const data1 = [
     id: 1,
     title: "Logo",
     img: logo1,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?",
+    desc: "Tùy chỉnh vị trí, kích thước và chất liệu logo để tăng khả năng hiển thị thương hiệu trên giường trẻ em.",
   },
   {
     id: 2,
-    title: "Packaging",
+    title: "Bao bì",
     img: logo2,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?",
+    desc: "Kết hợp logo hoặc tuyên bố về thương hiệu của bạn trên hộp bao bì để có giao diện thống nhất và nổi bật.",
   },
   {
     id: 3,
-    title: "Shap & Color",
+    title: "Hình dạng & Màu sắc",
     img: logo3,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?",
+    desc: "Cung cấp nhiều lựa chọn về màu sắc và hình dạng phù hợp với tính thẩm mỹ của thương hiệu, từ tông màu phấn nhẹ nhàng đến tông màu rực rỡ.",
   },
   {
     id: 4,
-    title: "Manual",
+    title: "Hướng dẫn sử dụng",
     img: logo4,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?",
+    desc: "Cung cấp hướng dẫn sử dụng sản phẩm phù hợp cho các thương hiệu khác nhau, đảm bảo hướng dẫn rõ ràng và thống nhất thương hiệu",
   },
 ];
 
@@ -113,14 +113,6 @@ const category = [
     id: 6,
     img: logo2,
   },
-  {
-    id: 7,
-    img: logo3,
-  },
-  {
-    id: 8,
-    img: logo4,
-  },
 ];
 
 function Home() {
@@ -188,43 +180,71 @@ function Home() {
         </div>
       </div>
 
-      <div className="row">
-        {data2.map((item, index) => {
-          return (
-            <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
-              <div class="card">
-                <img src={item.img} class="card-img-top" alt="..." />
-                <div class="p-2">
-                  <h5 class="card-title">{item.title}</h5>
-                  <p class="card-text">
-                    {item.price} ₫ – {item.priceSale} ₫
-                  </p>
-                  <a class="btn btn-primary" href={`/products/${item.slug}`}>
-                    Đặt hàng
-                  </a>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="">
-        <p className="">Danh mục Sản Phẩm</p>
+      <div className=" container">
         <div className="row">
-          {category.map((item, index) => {
+          {data2.map((item, index) => {
             return (
-              <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
+              <div class=" col-12 col-md-6 col-xl-4 col-xxl-3">
                 <div class="card">
                   <img src={item.img} class="card-img-top" alt="..." />
+                  <div class="p-2">
+                    <h5 class="card-title">{item.title}</h5>
+                    <p class="card-text">
+                      {item.price} ₫ – {item.priceSale} ₫
+                    </p>
+                    <a class="btn btn-primary" href={`/products/${item.slug}`}>
+                      Đặt hàng
+                    </a>
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
       </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1000 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          class="elementor-shape-fill"
+          opacity="0.33"
+          d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"
+        ></path>
+        <path
+          class="elementor-shape-fill"
+          opacity="0.66"
+          d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"
+        ></path>
+        <path
+          class="elementor-shape-fill"
+          d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"
+        ></path>
+      </svg>
+      <div className="container">
+        <p
+          className="text-center"
+          style={{ color: "#5F5139", fontWeight: "700", fontSize: "40px" }}
+        >
+          Danh mục Sản Phẩm
+        </p>
 
-      <div className="row">
+        <div
+          style={{ gridTemplateColumns: "1fr 1fr 1fr" }}
+          className="d-grid gap-3"
+        >
+          {category.map((item) => {
+            return (
+              <div class="card">
+                <img src={item.img} class="card-img-top" alt="..." />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div style={{ marginTop: "130px" }} className="row">
         <div className="col-6">
           <img
             style={{ width: "100%", height: "auto" }}
@@ -233,46 +253,62 @@ function Home() {
             className=""
           />
         </div>
-        <div className="col-6">
-          <p
-            className=""
-            style={{ color: "#5F5139", fontWeight: "bold", fontSize: "30px" }}
-          >
-            Tùy chỉnh cho thương hiệu, thị trường và khách hàng của bạn{" "}
-          </p>
-          <p className="">
-            Hãy giúp dòng sản phẩm đồ nội thất phòng trẻ em và nhiều sản phẩm
-            dành cho trẻ em khác của bạn dễ tiếp thị hơn và được khách hàng yêu
-            thích hơn với đầy đủ các tùy chọn tùy chỉnh của Craft Child!
-          </p>
-          <p className="">
-            Đội ngũ thiết kế và thợ thủ công chuyên nghiệp của chúng tôi có thể
-            giúp tạo ra những thiết kế sản phẩm dành cho trẻ em thiết thực và ấn
-            tượng, đồng thời gửi bản vẽ 3D để bạn xác nhận.
-          </p>
-          <p className="">
-            Bạn cũng được tự do lựa chọn màu sắc, chất liệu và bao bì để làm nổi
-            bật thương hiệu của mình. Hơn nữa, chúng tôi thậm chí có thể cung
-            cấp mẫu sản phẩm để bạn trực tiếp trải nghiệm chất lượng thương hiệu
-            của chúng tôi.
-          </p>
+        <div className="col-6 d-flex flex-column justify-content-center align-items-center">
+          <div className="w-75">
+            <p
+              className=""
+              style={{ color: "#5F5139", fontWeight: "700", fontSize: "40px" }}
+            >
+              Tùy chỉnh cho thương hiệu, thị trường và khách hàng của bạn{" "}
+            </p>
+            <p className="mt-5">
+              Hãy giúp dòng sản phẩm đồ nội thất phòng trẻ em và nhiều sản phẩm
+              dành cho trẻ em khác của bạn dễ tiếp thị hơn và được khách hàng
+              yêu thích hơn với đầy đủ các tùy chọn tùy chỉnh của Craft Child!
+            </p>
+            <p className="mt-5">
+              Đội ngũ thiết kế và thợ thủ công chuyên nghiệp của chúng tôi có
+              thể giúp tạo ra những thiết kế sản phẩm dành cho trẻ em thiết thực
+              và ấn tượng, đồng thời gửi bản vẽ 3D để bạn xác nhận.
+            </p>
+            <p className="mt-5">
+              Bạn cũng được tự do lựa chọn màu sắc, chất liệu và bao bì để làm
+              nổi bật thương hiệu của mình. Hơn nữa, chúng tôi thậm chí có thể
+              cung cấp mẫu sản phẩm để bạn trực tiếp trải nghiệm chất lượng
+              thương hiệu của chúng tôi.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="">
-        <p className="text-center">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
-          doloremque?
+      <div style={{ marginTop: "130px" }} className="container text-center">
+        <p
+          style={{ color: "#5F5139", fontWeight: "700", fontSize: "40px" }}
+          className="text-center"
+        >
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         </p>
-        <div className="row">
+        <div className="row" style={{ marginTop: "50px" }}>
           {data1.map((item, index) => {
             return (
               <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <div class="card">
                   <img src={item.img} class="card-img-top" alt="..." />
                   <div class="p-2">
-                    <h5 class="card-title">{item.title}</h5>
-                    <p class="card-text">{item.desc}</p>
+                    <h5
+                      class="card-title"
+                      style={{
+                        color: "#5F5139",
+                        fontWeight: "600",
+                        fontSize: "20px",
+                        margin: "10px",
+                      }}
+                    >
+                      {item.title}
+                    </h5>
+                    <p class="card-text" style={{}}>
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -281,9 +317,14 @@ function Home() {
         </div>
       </div>
 
-      <div className="">
-        <p className="text-center">Sản phẩm dành cho bé Luôn bên bạn</p>
-        <p className="">
+      <div style={{ marginTop: "130px" }} className="container text-center ">
+        <p style={{ color: "#5F5139", fontWeight: "700", fontSize: "40px" }}>
+          Sản phẩm dành cho bé Luôn bên bạn
+        </p>
+        <p
+          className=""
+          style={{ marginTop: "30px", marginBottom: "30px", lineHeight: 1.5 }}
+        >
           Là nhà sản xuất đồ nội thất trẻ em bán buôn hàng đầu với 23 năm kinh
           nghiệm, Craft Child cung cấp các sản phẩm nôi, nôi em bé, giường gỗ,
           xe tập đi, ghế ăn dặm và các sản phẩm dành cho trẻ em khác đến thị
@@ -295,7 +336,7 @@ function Home() {
         <img src={demo1} alt="" className="" />
       </div>
 
-      <div className="">
+      <div style={{ marginTop: "130px" }} className="container">
         <p className="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
           similique.
