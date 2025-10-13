@@ -5,7 +5,7 @@ import {
   NavLink,
   useLocation,
 } from "react-router";
-import { useEffect } from "react";
+import { lazy } from "react";
 
 // import Navigation from "../../layouts/Navigation";
 import Home from "../../pages/Home";
@@ -27,7 +27,10 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import PageLayout from "../../layouts/PageLayout";
 import SidebarLayout from "../../layouts/SidebarLayout";
 
-import Login from '@/pages/Auth/Login';
+const Login = lazy(() => import('@/pages/Auth/Login'));
+const PortalDemo = lazy( () =>import('@/pages/PortalDemo'))
+
+
 import Register from '@/pages/Auth/Register';
 import Loading from "../Loading";
 
@@ -66,6 +69,7 @@ function AppRoutes() {
         <Route path="use-state" element={<UseState />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/portal-demo" element={<PortalDemo />} />
       </Routes>
     </Router>
   );

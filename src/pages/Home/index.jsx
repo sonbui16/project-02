@@ -130,14 +130,13 @@ function Home() {
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
-
   return (
     <div className="">
       <div className={styles.full_width}>
         <div id="carouselExampleIndicators" class="carousel slide">
           <div className="carousel-indicators">
             <button
-                                                                                                                                                                                                                                                                                                                                                                              type="button"
+              type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="0"
               className="active"

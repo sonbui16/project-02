@@ -2,6 +2,12 @@ import axios from "axios";
 const httpClient = axios.create({
   baseURL: import.meta.env.VITE_BASE_API,
 });
+httpClient.interceptors.request.use((config) =>{
+  console.log("config" , config);
+  
+  return config;
+
+});
 const _send = async (method, path, data, config) => {
   const response = await httpClient.request({
     ...config,

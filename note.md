@@ -70,3 +70,12 @@ Desktop first: Desktop - Tablet - Mobile
     User click trên UI => Event handle => Dispatch action => Reducer nhận state hiện tại + action => Trả ra state mới
     => Re-render UI
     
+https://api01.f8team.dev/api/auth/register
+
+
+- Code splitting là chia nhỏ. kéo đến đâu tải đến đó (load more). khi nào cần thì ms dùng thì là (lazy)
+    + Load more ( button click -> load more)
+    + Infinity load (Scroll -> load more)
+    => Dung lượng lớn + ng dùng KHÔNG có xu hướng lao vào trực tiếp (Thêm vào Suspense)
+- Error Boundary: hiển thị lỗi khi code lỗi thay vì phải bật debug
+- React portal
