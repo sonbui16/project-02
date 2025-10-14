@@ -1,4 +1,4 @@
-import styles from "./Footer.module.css";
+import styles from "./Footer.module.scss";
 import bocongthuong from "../../../assets/images/bocongthuong.png";
 
 import { Link } from "react-router";
@@ -12,36 +12,51 @@ function Footer() {
     }
   }, []);
   return (
-    <footer className="">
+    <footer  className={styles.footer1}>
       <hr className="my-5" />
       <div className="container ">
         <div className="row">
-          <div className="col-6 col-lg-3">
-            <h3 className={styles.footer__heading}>GIỚI THIỆU</h3>
-            <ul className={styles.footer__list}>
-              <li className={styles.footer__item}>
-                <Link to="/about-us" className={styles.footer__link}>
-                  Giới thiệu
-                </Link>
-              </li>
-              <li className={styles.footer__item}>
-                <Link to="/page/refund-policy" className={styles.footer__link}>
-                  Chính sách đổi trả
-                </Link>
-              </li>
-              <li className={styles.footer__item}>
-                <Link to="/page/privacy" className={styles.footer__link}>
-                  Chính sách bảo mật
-                </Link>
-              </li>
-              <li className={styles.footer__item}>
-                <Link to="/page/terms-of-use" className={styles.footer__link}>
-                  Điều khoản dịch vụ
-                </Link>
-              </li>
-            </ul>
+          <div className="col-12 col-sm-6 col-lg-3">
+            <h3
+              className={styles.footer__heading}
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              GIỚI THIỆU1
+            </h3>
+
+            <div class="collapse" id="collapseExample">
+              <ul className={styles.footer__list}>
+                <li className={styles.footer__item}>
+                  <Link to="/about-us" className={styles.footer__link}>
+                    Giới thiệu
+                  </Link>
+                </li>
+                <li className={styles.footer__item}>
+                  <Link
+                    to="/page/refund-policy"
+                    className={styles.footer__link}
+                  >
+                    Chính sách đổi trả
+                  </Link>
+                </li>
+                <li className={styles.footer__item}>
+                  <Link to="/page/privacy" className={styles.footer__link}>
+                    Chính sách bảo mật
+                  </Link>
+                </li>
+                <li className={styles.footer__item}>
+                  <Link to="/page/terms-of-use" className={styles.footer__link}>
+                    Điều khoản dịch vụ
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="col-6 col-lg-3">
+          <div className="col-12 col-sm-6 col-lg-3">
             <h3 className={styles.footer__heading}>THÔNG TIN CÔNG TY</h3>
             <ul className={styles.footer__list}>
               <li className={styles.footer__item}>
@@ -98,7 +113,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-6 col-lg-3">
+          <div className="col-12 col-sm-6 col-lg-3">
             <div className="">
               <h3 className={styles.footer__heading}>HỆ THỐNG CỬA HÀNG</h3>
               <ul className={styles.footer__list}>
@@ -125,9 +140,10 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="col-6 col-lg-3">
-              <h3 className={styles.footer__heading}>FANPAGE</h3>
-              <div
+          <div className="col-12 col-sm-6 col-lg-3 bg-primary ">
+            <h3 className={styles.footer__heading}>FANPAGE</h3>
+            <p className="">123123123112312312311231231231</p>
+            {/* <div
                 className="fb-page"
                 data-href="https://www.facebook.com/profile.php?id=61579803456004"
                 data-width="340px"
@@ -144,7 +160,7 @@ function Footer() {
                     Nôi Việt - Nâng Niu Giấc Ngủ Trẻ Thơ
                   </a>
                 </blockquote>
-              </div>
+              </div> */}
           </div>
         </div>
       </div>
@@ -161,6 +177,7 @@ function Footer() {
           />
         </div>
       </div>
+      <div class="container"></div>
     </footer>
   );
 }

@@ -124,7 +124,7 @@ function Home() {
   }, []);
   return (
     <div className="">
-      <div className={styles.full_width}>
+      {/* <div className={styles.full_width}>
         <div id="carouselExampleIndicators" class="carousel slide">
           <div className="carousel-indicators">
             <button
@@ -178,7 +178,7 @@ function Home() {
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
+      </div> */}
 
       <div className=" container">
         <div className="row">
@@ -202,7 +202,7 @@ function Home() {
           })}
         </div>
       </div>
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1000 100"
         preserveAspectRatio="none"
@@ -221,7 +221,7 @@ function Home() {
           class="elementor-shape-fill"
           d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"
         ></path>
-      </svg>
+      </svg> */}
       <div className="container">
         <p
           className="text-center"
@@ -333,7 +333,7 @@ function Home() {
           OEM/ODM cho trẻ em với các quy trình kiểm soát chất lượng nghiêm ngặt
           để đảm bảo bạn chỉ nhận được những sản phẩm tốt nhất.
         </p>
-        <img src={demo1} alt="" className="" />
+        {/* <img src={demo1} alt="" className="" /> */}
       </div>
 
       <div style={{ marginTop: "130px" }} className="container">

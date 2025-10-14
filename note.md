@@ -79,3 +79,8 @@ https://api01.f8team.dev/api/auth/register
     => Dung lượng lớn + ng dùng KHÔNG có xu hướng lao vào trực tiếp (Thêm vào Suspense)
 - Error Boundary: hiển thị lỗi khi code lỗi thay vì phải bật debug
 - React portal
+
+
+>=576px - iphone (sm)
+>=768px - ipad - (md)
+>= 992px - desktop - (lg / xl / xxl ) 
