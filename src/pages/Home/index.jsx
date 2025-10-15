@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet";
+
 import styles from "./Home.module.css";
 import carouse2 from "../../assets/images/carouse2.png";
 import carouse1 from "../../assets/images/carouse1.jpg";
@@ -124,6 +126,12 @@ function Home() {
   }, []);
   return (
     <div className="">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Trang chủ</title>
+         <meta name="description" content="Trang chủ" />
+      </Helmet>
+
       {/* <div className={styles.full_width}>
         <div id="carouselExampleIndicators" class="carousel slide">
           <div className="carousel-indicators">

@@ -1,6 +1,13 @@
+import { Helmet } from "react-helmet";
+
 function RefundPolicy() {
   return (
     <div className="">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Chính sách đổi trả</title>
+        <meta name="description" content="Chính sách đổi trả của chúng tôi" />
+      </Helmet>
       <a rel="stylesheet" href="/" classNameName="">
         Trang chủ /
       </a>{" "}
