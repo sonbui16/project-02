@@ -81,6 +81,8 @@ https://api01.f8team.dev/api/auth/register
 - React portal
 
 
->=576px - iphone (sm)
->=768px - ipad - (md)
->= 992px - desktop - (lg / xl / xxl ) 
+<= md  : mobile
+md - lg: tablet
+>lg    : pc
+
+- Nén hình ảnh: https://tinypng.com/ 

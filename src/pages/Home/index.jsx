@@ -129,7 +129,7 @@ function Home() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Trang chủ</title>
-         <meta name="description" content="Trang chủ" />
+        <meta name="description" content="Trang chủ" />
       </Helmet>
 
       {/* <div className={styles.full_width}>
@@ -186,28 +186,38 @@ function Home() {
             <span class="visually-hidden">Next</span>
           </button>
         </div>
+        flex-wrap overflow-auto flex-lg-wrap flex-md-nowrap
       </div> */}
+      <div className={styles.customBg}>
+        <div className="container">
+          <div className="row d-md-flex flex-lg-wrap flex-md-nowrap flex-nowrap g-3">
+            {data2.map((item, index) => {
+              return (
+                <div class="col-lg-3 col">
+                  <div className="bg-white rounded-3">
+                    <div className="w-100"></div>
+                    <img
+                      src={item.img}
+                      style={{
+                        width: "100%",
+                        // height: "270px",
+                        objectFit: "cover",
+                        height:'270px'
+                      }}
+                      alt="..."
+                    />
+                    <div className="text-center">
 
-      <div className=" container">
-        <div className="row">
-          {data2.map((item, index) => {
-            return (
-              <div class=" col-12 col-md-6 col-xl-4 col-xxl-3">
-                <div class="card">
-                  <img src={item.img} class="card-img-top" alt="..." />
-                  <div class="p-2">
-                    <h5 class="card-title">{item.title}</h5>
-                    <p class="card-text">
-                      {item.price} ₫ – {item.priceSale} ₫
-                    </p>
-                    <a class="btn btn-primary" href={`/products/${item.slug}`}>
-                      Đặt hàng
-                    </a>
+                    <h1 className={styles.title}>{item.title}</h1>
+                    <h1 className={styles.title}>129</h1>
+                    </div>
+
+                    {/* <h1 class="">123123</h1> */}
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
       {/* <svg
@@ -253,7 +263,7 @@ function Home() {
       </div>
 
       <div style={{ marginTop: "130px" }} className="row">
-        <div className="col-6">
+        <div className="col-lg-6 col-12">
           <img
             style={{ width: "100%", height: "auto" }}
             src={design}
@@ -261,7 +271,7 @@ function Home() {
             className=""
           />
         </div>
-        <div className="col-6 d-flex flex-column justify-content-center align-items-center">
+        <div className="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center">
           <div className="w-75">
             <p
               className=""
