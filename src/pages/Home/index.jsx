@@ -42,7 +42,7 @@ const data1 = [
 const data2 = [
   {
     id: 1,
-    title: "NÔI GỖ CHO BÉ 6 CHẾ ĐỘ CHILUX PEACE – Natural",
+    title: " Natural ưeqweqweqweqw ưeqwewq",
     price: 1000,
     priceSale: 900,
     img: "https://chilux.vn/wp-content/uploads/2023/02/NOI-3-600x600.jpg",
@@ -50,7 +50,8 @@ const data2 = [
   },
   {
     id: 2,
-    title: "NÔI CŨI ĐA NĂNG 6 CHẾ ĐỘ CHILUX PEACE – White",
+    title:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, nulla?",
     price: 1000,
     priceSale: 900,
     img: "https://chilux.vn/wp-content/uploads/2025/05/noi-go-gap-gon-chilux.jpg",
@@ -58,7 +59,7 @@ const data2 = [
   },
   {
     id: 3,
-    title: "NÔI CŨI GẤP GỌN",
+    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, qui?",
     price: 1000,
     priceSale: 900,
     img: "https://chilux.vn/wp-content/uploads/2024/09/Combo-1-70.jpg",
@@ -66,7 +67,8 @@ const data2 = [
   },
   {
     id: 4,
-    title: "GIƯỜNG GỖ CHO BÉ CHILUX",
+    title:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, dolor!",
     price: 1000,
     priceSale: 900,
     img: "https://chilux.vn/wp-content/uploads/2023/02/COMBO-1-1-600x600.jpg",
@@ -75,7 +77,7 @@ const data2 = [
 
   {
     id: 5,
-    title: "NÔI CŨI GẤP GỌN",
+    title: "Lorem ipsum dolor sit ",
     price: 1000,
     priceSale: 900,
     img: "https://chilux.vn/wp-content/uploads/2024/09/Combo-1-70.jpg",
@@ -83,7 +85,8 @@ const data2 = [
   },
   {
     id: 6,
-    title: "GIƯỜNG GỖ CHO BÉ CHILUX",
+    title:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, dolor!",
     price: 1000,
     priceSale: 900,
     img: "https://chilux.vn/wp-content/uploads/2023/02/COMBO-1-1-600x600.jpg",
@@ -132,84 +135,26 @@ function Home() {
         <meta name="description" content="Trang chủ" />
       </Helmet>
 
-      {/* <div className={styles.full_width}>
-        <div id="carouselExampleIndicators" class="carousel slide">
-          <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src={carouse2} class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src={carouse1} class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src={carouse2} class="d-block w-100" alt="..." />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-        flex-wrap overflow-auto flex-lg-wrap flex-md-nowrap
-      </div> */}
       <div className={styles.customBg}>
-        <div className="container">
-          <div className="row d-md-flex flex-lg-wrap flex-md-nowrap flex-nowrap g-3">
+        <div className="container overflow-auto">
+          <div className="row d-md-flex p-2 g-3  flex-md-wrap flex-nowrap ">
             {data2.map((item, index) => {
               return (
-                <div class="col-lg-3 col">
-                  <div className="bg-white rounded-3">
-                    <div className="w-100"></div>
+                <div class="col-md-3 col-5 rounded-3 align-items-stretch d-flex">
+                  <div className="bg-white  rounded-3">
                     <img
                       src={item.img}
+                      // src="https://picsum.photos/200/300"
                       style={{
-                        width: "100%",
-                        // height: "270px",
-                        objectFit: "cover",
-                        height:'270px'
+                        maxWidth: "100%",
+                        minHeight: "140px",
+                        display: "block",
+                        margin: "0 auto",
                       }}
                       alt="..."
                     />
-                    <div className="text-center">
-
-                    <h1 className={styles.title}>{item.title}</h1>
-                    <h1 className={styles.title}>129</h1>
+                    <div className="text-center p-4">
+                      <h1 className={styles.title}>{item.title}</h1>
                     </div>
 
                     {/* <h1 class="">123123</h1> */}
@@ -220,26 +165,7 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1000 100"
-        preserveAspectRatio="none"
-      >
-        <path
-          class="elementor-shape-fill"
-          opacity="0.33"
-          d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"
-        ></path>
-        <path
-          class="elementor-shape-fill"
-          opacity="0.66"
-          d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"
-        ></path>
-        <path
-          class="elementor-shape-fill"
-          d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"
-        ></path>
-      </svg> */}
+
       <div className="container">
         <p
           className="text-center"
@@ -264,14 +190,14 @@ function Home() {
 
       <div style={{ marginTop: "130px" }} className="row">
         <div className="col-lg-6 col-12">
-          <img
+          {/* <img
             style={{ width: "100%", height: "auto" }}
             src={design}
             alt=""
             className=""
-          />
+          /> */}
         </div>
-        <div className="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center">
+        {/* <div className="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center">
           <div className="w-75">
             <p
               className=""
@@ -296,7 +222,7 @@ function Home() {
               thương hiệu của chúng tôi.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div style={{ marginTop: "130px" }} className="container text-center">

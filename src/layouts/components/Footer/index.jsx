@@ -12,7 +12,7 @@ function Footer() {
     }
   }, []);
   return (
-    <footer  className={styles.footer1}>
+    <footer className={styles.footer1}>
       <hr className="my-5" />
       <div className="container ">
         <div className="row">
@@ -170,6 +170,7 @@ function Footer() {
         <div className="d-flex flex-row align-items-center">
           <span> © 2025 - Powered by NoiViet </span>
           <img
+            loading="lazy"
             style={{ width: "200px", height: "auto", marginLeft: "10px" }}
             src={bocongthuong}
             alt="noiviet"

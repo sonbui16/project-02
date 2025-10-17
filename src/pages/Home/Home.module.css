@@ -15,8 +15,8 @@
 }
 .customBg{
     background-color: #fafaf2;
-    padding: 10px;
-    overflow: auto;
+    /* padding: 10px; */
+    /* overflow: auto; */
 }
 .title {
     display: -webkit-box;
@@ -24,6 +24,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     word-break: break-all;
-    padding: 10px;
     text-transform:lowercase;
+    font-size: 1.4rem;
 }
