@@ -136,12 +136,23 @@ function Home() {
       </Helmet>
 
       <div className={styles.customBg}>
+        <p
+          className="text-center"
+          style={{
+            color: "#5F5139",
+            fontWeight: "700",
+            fontSize: "33px",
+            paddingBottom: "20px",
+          }}
+        >
+          SẢN PHẨM NỔI BẬT
+        </p>
         <div className="container overflow-auto">
           <div className="row d-md-flex p-2 g-3  flex-md-wrap flex-nowrap ">
             {data2.map((item, index) => {
               return (
                 <div class="col-md-3 col-5 rounded-3 align-items-stretch d-flex">
-                  <div className="bg-white  rounded-3">
+                  <div className="bg-white rounded-3">
                     <img
                       src={item.img}
                       // src="https://picsum.photos/200/300"
@@ -166,12 +177,17 @@ function Home() {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container py-5">
         <p
           className="text-center"
-          style={{ color: "#5F5139", fontWeight: "700", fontSize: "40px" }}
+          style={{
+            color: "#5F5139",
+            fontWeight: "700",
+            fontSize: "33px",
+            marginBottom: "30px",
+          }}
         >
-          Danh mục Sản Phẩm
+          DANH MỤC SẢN PHẨM
         </p>
 
         <div
@@ -188,41 +204,48 @@ function Home() {
         </div>
       </div>
 
-      <div style={{ marginTop: "130px" }} className="row">
-        <div className="col-lg-6 col-12">
-          {/* <img
-            style={{ width: "100%", height: "auto" }}
-            src={design}
-            alt=""
-            className=""
-          /> */}
-        </div>
-        {/* <div className="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center">
-          <div className="w-75">
-            <p
+      <div className=" container-fluid mt-5 ">
+        <div className="row">
+          <div className="col-lg-6 ">
+            <img
+              style={{ maxWidth: "100%" }}
+              src={design}
+              alt=""
               className=""
-              style={{ color: "#5F5139", fontWeight: "700", fontSize: "40px" }}
-            >
-              Tùy chỉnh cho thương hiệu, thị trường và khách hàng của bạn{" "}
-            </p>
-            <p className="mt-5">
-              Hãy giúp dòng sản phẩm đồ nội thất phòng trẻ em và nhiều sản phẩm
-              dành cho trẻ em khác của bạn dễ tiếp thị hơn và được khách hàng
-              yêu thích hơn với đầy đủ các tùy chọn tùy chỉnh của Craft Child!
-            </p>
-            <p className="mt-5">
-              Đội ngũ thiết kế và thợ thủ công chuyên nghiệp của chúng tôi có
-              thể giúp tạo ra những thiết kế sản phẩm dành cho trẻ em thiết thực
-              và ấn tượng, đồng thời gửi bản vẽ 3D để bạn xác nhận.
-            </p>
-            <p className="mt-5">
-              Bạn cũng được tự do lựa chọn màu sắc, chất liệu và bao bì để làm
-              nổi bật thương hiệu của mình. Hơn nữa, chúng tôi thậm chí có thể
-              cung cấp mẫu sản phẩm để bạn trực tiếp trải nghiệm chất lượng
-              thương hiệu của chúng tôi.
-            </p>
+            />
           </div>
-        </div> */}
+          <div className="col-lg-6  d-flex  justify-content-center align-items-center">
+            <div className="px-5">
+              <p
+                className=""
+                style={{
+                  color: "#5F5139",
+                  fontWeight: "700",
+                  fontSize: "40px",
+                }}
+              >
+                Tùy chỉnh cho thương hiệu, thị trường và khách hàng của bạn{" "}
+              </p>
+              <p className="mt-5">
+                Hãy giúp dòng sản phẩm đồ nội thất phòng trẻ em và nhiều sản
+                phẩm dành cho trẻ em khác của bạn dễ tiếp thị hơn và được khách
+                hàng yêu thích hơn với đầy đủ các tùy chọn tùy chỉnh của Craft
+                Child!
+              </p>
+              <p className="mt-5">
+                Đội ngũ thiết kế và thợ thủ công chuyên nghiệp của chúng tôi có
+                thể giúp tạo ra những thiết kế sản phẩm dành cho trẻ em thiết
+                thực và ấn tượng, đồng thời gửi bản vẽ 3D để bạn xác nhận.
+              </p>
+              <p className="mt-5">
+                Bạn cũng được tự do lựa chọn màu sắc, chất liệu và bao bì để làm
+                nổi bật thương hiệu của mình. Hơn nữa, chúng tôi thậm chí có thể
+                cung cấp mẫu sản phẩm để bạn trực tiếp trải nghiệm chất lượng
+                thương hiệu của chúng tôi.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div style={{ marginTop: "130px" }} className="container text-center">
@@ -235,12 +258,22 @@ function Home() {
         <div className="row" style={{ marginTop: "50px" }}>
           {data1.map((item, index) => {
             return (
-              <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <div class="card">
-                  <img src={item.img} class="card-img-top" alt="..." />
+              <div class="col-12 col-md-6 col-lg-3 ">
+                <div class="">
+                  <img
+                    src={item.img}
+                    class=""
+                    style={{
+                      maxWidth: "100%",
+                      minHeight: "140px",
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                    alt="..."
+                  />
                   <div class="p-2">
                     <h5
-                      class="card-title"
+                      class=""
                       style={{
                         color: "#5F5139",
                         fontWeight: "600",
@@ -250,7 +283,7 @@ function Home() {
                     >
                       {item.title}
                     </h5>
-                    <p class="card-text" style={{}}>
+                    <p class="" className={styles.title}>
                       {item.desc}
                     </p>
                   </div>
