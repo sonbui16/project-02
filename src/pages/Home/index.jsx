@@ -151,7 +151,13 @@ function Home() {
           <div className="row d-md-flex p-2 g-3  flex-md-wrap flex-nowrap ">
             {data2.map((item, index) => {
               return (
-                <div class="col-md-3 col-5 rounded-3 align-items-stretch d-flex">
+                <div
+                  class="col-md-3 col-5 rounded-3 align-items-stretch d-flex"
+                  // onClick={() => {
+                  //   console.log("click");
+                  // }}
+                >
+                  <Link to={`/products/${item.slug}`}>
                   <div className="bg-white rounded-3">
                     <img
                       src={item.img}
@@ -170,6 +176,7 @@ function Home() {
 
                     {/* <h1 class="">123123</h1> */}
                   </div>
+                  </Link>
                 </div>
               );
             })}
@@ -310,7 +317,7 @@ function Home() {
           OEM/ODM cho trẻ em với các quy trình kiểm soát chất lượng nghiêm ngặt
           để đảm bảo bạn chỉ nhận được những sản phẩm tốt nhất.
         </p>
-        {/* <img src={demo1} alt="" className="" /> */}
+        <img src={demo1} alt="" className="" />
       </div>
 
       <div style={{ marginTop: "130px" }} className="container">

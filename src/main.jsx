@@ -7,6 +7,9 @@ import App from "./App.jsx";
 import { persistor, store } from "@/store/store";
 import ErrorBoundary from "./components/ ErrorBoundary.jsx";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 createRoot(document.getElementById("root")).render(
   <ErrorBoundary>
     <ReduxProvider store={store}>
