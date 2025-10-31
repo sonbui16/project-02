@@ -12,10 +12,20 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" ,}}
+      className={{}}
+      style={{ ...style, display: "block", background: "red" , position: 'absolute', top: '50%', right: '10px', zIndex: 1}}
       onClick={onClick}
-    />
+    >ádasda</div>
+  );
+}
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={{}}
+      style={{ ...style, display: "block", background: "green", position: 'absolute', top: '50%', left: '10px', zIndex: 1 }}
+      onClick={onClick}
+    >ádasda1</div>
   );
 }
 
@@ -40,15 +50,21 @@ function ProductsDetail() {
     }
   };
   var settings = {
-    // dots: true, 
+    dots: true,
     dotsClass: "button__bar",
+    fade: true,
+    // adaptiveHeight: true,
     infinite: true,
-    speed: 500,
+    // speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow:<SampleNextArrow />,
-    // afterChange: () => setUpdateCount(updateCount + 1),
-    // beforeChange: (current, next) => setSlideIndex(next),
+    pauseOnHover: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    afterChange: () => setUpdateCount(updateCount + 1),
+    beforeChange: (current, next) => setSlideIndex(next),
     appendDots: (dots) => {
       return (
         <div
@@ -87,6 +103,24 @@ function ProductsDetail() {
               </div>
             );
           })}
+        </div>
+      );
+    },
+    customPaging: (i) => {
+      return (
+        <div>
+          <img
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              // filter: "grayscale(100%)",
+              // opacity: 0.6,
+            }}
+            src={productImages[i]}
+            // alt={`thumb-${i}`}
+            className="thumbnail-img slick-active"
+          />
         </div>
       );
     },
