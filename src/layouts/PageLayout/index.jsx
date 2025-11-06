@@ -7,7 +7,7 @@ function PageLayout() {
   return (
     <div className="">
       <Header />
-      <main className="container">
+      <main className="">
         <Outlet />
       </main>
       <Footer />

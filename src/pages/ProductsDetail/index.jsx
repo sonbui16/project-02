@@ -13,9 +13,19 @@ function SampleNextArrow(props) {
   return (
     <div
       className={{}}
-      style={{ ...style, display: "block", background: "red" , position: 'absolute', top: '50%', right: '10px', zIndex: 1}}
+      style={{
+        ...style,
+        display: "block",
+        background: "red",
+        position: "absolute",
+        top: "50%",
+        right: "10px",
+        zIndex: 1,
+      }}
       onClick={onClick}
-    >ádasda</div>
+    >
+      ádasda
+    </div>
   );
 }
 function SamplePrevArrow(props) {
@@ -23,9 +33,19 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={{}}
-      style={{ ...style, display: "block", background: "green", position: 'absolute', top: '50%', left: '10px', zIndex: 1 }}
+      style={{
+        ...style,
+        display: "block",
+        background: "green",
+        position: "absolute",
+        top: "50%",
+        left: "10px",
+        zIndex: 1,
+      }}
       onClick={onClick}
-    >ádasda1</div>
+    >
+      ádasda1
+    </div>
   );
 }
 
@@ -127,6 +147,7 @@ function ProductsDetail() {
   };
   return (
     <div className="container">
+      <h1 class="text-3xl font-bold underline italic">Hello world!</h1>
       <div className="row">
         <div className="col-lg-6">
           <div className="slider-container ">

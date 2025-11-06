@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Helmet } from "react-helmet";
 
-import styles from "./Home.module.css";
 import carouse2 from "../../assets/images/carouse2.png";
 import carouse1 from "../../assets/images/carouse1.jpg";
 import design from "../../assets/images/design.jpg";
@@ -135,7 +134,7 @@ function Home() {
         <meta name="description" content="Trang chủ" />
       </Helmet>
 
-      <div className={styles.customBg}>
+      <div className={{}}>
         <p
           className="text-center"
           style={{
@@ -147,35 +146,35 @@ function Home() {
         >
           SẢN PHẨM NỔI BẬT
         </p>
-        <div className="container overflow-auto">
-          <div className="row d-md-flex p-2 g-3  flex-md-wrap flex-nowrap ">
+        <div className="overflow-auto">
+          <div className="row d-md-flex g-3 flex-md-wrap flex-nowrap p-2">
             {data2.map((item, index) => {
               return (
                 <div
-                  class="col-md-3 col-5 rounded-3 align-items-stretch d-flex"
+                  class="col-md-3 rounded-3 align-items-stretch d-flex col-5"
                   // onClick={() => {
                   //   console.log("click");
                   // }}
                 >
                   <Link to={`/products/${item.slug}`}>
-                  <div className="bg-white rounded-3">
-                    <img
-                      src={item.img}
-                      // src="https://picsum.photos/200/300"
-                      style={{
-                        maxWidth: "100%",
-                        minHeight: "140px",
-                        display: "block",
-                        margin: "0 auto",
-                      }}
-                      alt="..."
-                    />
-                    <div className="text-center p-4">
-                      <h1 className={styles.title}>{item.title}</h1>
-                    </div>
+                    <div className="rounded-3 bg-white">
+                      <img
+                        src={item.img}
+                        // src="https://picsum.photos/200/300"
+                        style={{
+                          maxWidth: "100%",
+                          minHeight: "140px",
+                          display: "block",
+                          margin: "0 auto",
+                        }}
+                        alt="..."
+                      />
+                      <div className="p-4 text-center">
+                        <h1 className={{}}>{item.title}</h1>
+                      </div>
 
-                    {/* <h1 class="">123123</h1> */}
-                  </div>
+                      {/* <h1 class="">123123</h1> */}
+                    </div>
                   </Link>
                 </div>
               );
@@ -184,7 +183,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="container py-5">
+      <div className="py-5">
         <p
           className="text-center"
           style={{
@@ -211,9 +210,9 @@ function Home() {
         </div>
       </div>
 
-      <div className=" container-fluid mt-5 ">
+      <div className="container-fluid mt-5">
         <div className="row">
-          <div className="col-lg-6 ">
+          <div className="col-lg-6">
             <img
               style={{ maxWidth: "100%" }}
               src={design}
@@ -221,7 +220,7 @@ function Home() {
               className=""
             />
           </div>
-          <div className="col-lg-6  d-flex  justify-content-center align-items-center">
+          <div className="col-lg-6 d-flex justify-content-center align-items-center">
             <div className="px-5">
               <p
                 className=""
@@ -265,7 +264,7 @@ function Home() {
         <div className="row" style={{ marginTop: "50px" }}>
           {data1.map((item, index) => {
             return (
-              <div class="col-12 col-md-6 col-lg-3 ">
+              <div class="col-md-6 col-lg-3 col-12">
                 <div class="">
                   <img
                     src={item.img}
@@ -290,7 +289,7 @@ function Home() {
                     >
                       {item.title}
                     </h5>
-                    <p class="" className={styles.title}>
+                    <p class="" className={{}}>
                       {item.desc}
                     </p>
                   </div>
@@ -301,7 +300,7 @@ function Home() {
         </div>
       </div>
 
-      <div style={{ marginTop: "130px" }} className="container text-center ">
+      <div style={{ marginTop: "130px" }} className="container text-center">
         <p style={{ color: "#5F5139", fontWeight: "700", fontSize: "40px" }}>
           Sản phẩm dành cho bé Luôn bên bạn
         </p>
@@ -320,7 +319,7 @@ function Home() {
         <img src={demo1} alt="" className="" />
       </div>
 
-      <div style={{ marginTop: "130px" }} className="container">
+      <div style={{ marginTop: "130px" }} className="">
         <p className="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
           similique.

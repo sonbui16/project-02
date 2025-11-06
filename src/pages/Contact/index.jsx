@@ -11,26 +11,46 @@ import { getList as getProductList } from "@/services/product/productService";
 import { selectProductList } from "@/features/product/productSlice";
 import { useProductList, useFetchProductList } from "@/features/product";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import Button from "@mui/material/Button";
 import { useCounter } from "@/features/counter/hooks";
+import { Input } from "@/components/ui/input";
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useTheme } from "@/components/theme-provider";
 
 function Contact() {
   // getProductList();
   useFetchProductList();
   // console.log("sonbh123", sonbh);
   useProductList();
-
   // const couter1 = useCounter()
+  const { setTheme } = useTheme();
   return (
-    <div>
-      <Button variant="contained">Hello world</Button>
-      <Button disabled variant="outlined">
-        Outlined
-      </Button>
-      <p>Đây là trang liên hệ.</p>
-      <FontAwesomeIcon icon={faYoutube} className="text-success fs-1" />
-      <FontAwesomeIcon icon={faMagnifyingGlass} className="text-success fs-3" />
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon">
+          <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem onClick={() => setTheme("light")}>
+          Light
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          Dark
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("system")}>
+          System
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
 export default Contact;
