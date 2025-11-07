@@ -115,6 +115,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { buttonVariants } from "@/components/ui/button";
 
 const components = [
   {
@@ -209,7 +210,12 @@ function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs">Docs</Link>
+            <Link
+              href="/docs"
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Docs
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:block">
