@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Helmet } from "react-helmet";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 import carouse2 from "../../assets/images/carouse2.png";
 import carouse1 from "../../assets/images/carouse1.jpg";
@@ -128,12 +136,34 @@ function Home() {
   }, []);
   return (
     <div className="">
+      1
       <Helmet>
         <meta charSet="utf-8" />
         <title>Trang chủ</title>
         <meta name="description" content="Trang chủ" />
       </Helmet>
-
+      <div className="md:container md:mx-auto">
+        <Carousel className="w-full bg-red-500">
+          <CarouselContent className="">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <CarouselItem key={index}>
+                12
+                {/* <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <span className="text-4xl font-semibold">
+                        {index + 1}
+                      </span>
+                    </CardContent>
+                  </Card>
+                </div> */}
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
       <div className={{}}>
         <p
           className="text-center"
@@ -182,7 +212,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div className="py-5">
         <p
           className="text-center"
@@ -209,7 +238,6 @@ function Home() {
           })}
         </div>
       </div>
-
       <div className="container-fluid mt-5">
         <div className="row">
           <div className="col-lg-6">
@@ -253,7 +281,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div style={{ marginTop: "130px" }} className="container text-center">
         <p
           style={{ color: "#5F5139", fontWeight: "700", fontSize: "40px" }}
@@ -299,7 +326,6 @@ function Home() {
           })}
         </div>
       </div>
-
       <div style={{ marginTop: "130px" }} className="container text-center">
         <p style={{ color: "#5F5139", fontWeight: "700", fontSize: "40px" }}>
           Sản phẩm dành cho bé Luôn bên bạn
@@ -318,7 +344,6 @@ function Home() {
         </p>
         <img src={demo1} alt="" className="" />
       </div>
-
       <div style={{ marginTop: "130px" }} className="">
         <p className="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
