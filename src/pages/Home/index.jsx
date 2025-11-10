@@ -136,18 +136,21 @@ function Home() {
   }, []);
   return (
     <div className="">
-      1
       <Helmet>
         <meta charSet="utf-8" />
         <title>Trang chủ</title>
         <meta name="description" content="Trang chủ" />
       </Helmet>
-      <div className="md:container md:mx-auto">
+      <div className="">
         <Carousel className="w-full bg-red-500">
           <CarouselContent className="">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index}>
-                12
+                <img
+                  src={carouse2}
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
                 {/* <div className="p-1">
                   <Card>
                     <CardContent className="flex aspect-square items-center justify-center p-6">

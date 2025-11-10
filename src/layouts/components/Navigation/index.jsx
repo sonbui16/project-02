@@ -159,7 +159,7 @@ function Navigation() {
   const isMobile = useIsMobile();
 
   return (
-    <NavigationMenu viewport={isMobile}>
+    <NavigationMenu viewport={isMobile} className="mb-1">
       <NavigationMenuList className="flex-wrap">
         <NavigationMenuItem>
           <NavigationMenuTrigger>GIỚI THIỆU NÔI VIỆT</NavigationMenuTrigger>
@@ -209,14 +209,16 @@ function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+          <NavigationMenuTrigger> THỜI TRANG CHO BÉ 2-6Y</NavigationMenuTrigger>
+
+          {/* <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link
               href="/docs"
               className={buttonVariants({ variant: "outline" })}
             >
               THỜI TRANG CHO BÉ 2-6Y
             </Link>
-          </NavigationMenuLink>
+          </NavigationMenuLink> */}
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger>HỆ THỐNG ĐẠI LÝ</NavigationMenuTrigger>

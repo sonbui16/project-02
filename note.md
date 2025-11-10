@@ -106,3 +106,7 @@ md - lg: tablet
 - Spread: Trải ra - const colorCopy = [...color]
 - Classes
 - Modules
+
+* Cách sử dụng shadcn
+
+- Tạo theme sử dụng https://tweakcn.com/
